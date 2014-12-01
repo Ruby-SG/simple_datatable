@@ -1,0 +1,40 @@
+module SimpleDatatable
+  class InstallGenerator < Rails::Generators::Base
+    source_root File.expand_path('../templates', __FILE__)
+    CSS_PATH = "#{Rails.root}/app/assets/stylesheets/application.css"
+    JS_PATH = "#{Rails.root}/app/assets/javascripts/application.js"
+
+    def has_use_bootstrap
+      @use_bootstrap = yes? 'Would you like to add Bootstrap 3 stylesheet?'
+    end
+
+    def add_datatable_bootstrap_stylesheets
+      return unless @use_bootstrap
+
+      inject_into_file CSS_PATH, after: "*= require_self\n" do
+        <<-'RUBY'
+ *= require simple_datatable/bootstrap
+ *= require simple_datatable/dataTables.bootstrap
+        RUBY
+      end
+    end
+
+    def add_datatable_javascripts
+      inject_into_file JS_PATH, after: "//= require jquery_ujs\n" do
+        <<-'RUBY'
+//= require simple_datatable/jquery.dataTables.min
+        RUBY
+      end
+    end
+
+    def add_datatable_bootstrap_javascripts
+      return unless @use_bootstrap
+
+      inject_into_file JS_PATH, after: "//= require simple_datatable/jquery.dataTables.min\n" do
+        <<-'RUBY'
+//= require simple_datatable/dataTables.bootstrap
+        RUBY
+      end
+    end
+  end
+end
