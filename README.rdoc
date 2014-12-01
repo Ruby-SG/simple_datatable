@@ -2,6 +2,7 @@
 
 {<img src="https://codeclimate.com/github/Ruby-SG/simple_datatable/badges/gpa.svg" />}[https://codeclimate.com/github/Ruby-SG/simple_datatable]
 {<img src="https://travis-ci.org/Ruby-SG/simple_datatable.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/Ruby-SG/simple_datatable]
+{<img src="https://badge.fury.io/rb/simple_datatable.svg" alt="Gem Version" />}[http://badge.fury.io/rb/simple_datatable]
 
 == Installation
 
