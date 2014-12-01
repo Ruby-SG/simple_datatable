@@ -1,3 +1,3 @@
-= SimpleDatatable
+= Simple_datatable
 
-This project rocks and uses MIT-LICENSE.
+{<img src="https://codeclimate.com/github/Ruby-SG/simple_datatable/badges/gpa.svg" />}[https://codeclimate.com/github/Ruby-SG/simple_datatable]
