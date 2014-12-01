@@ -16,3 +16,4 @@
 === Render datatable
 
   = simple_datatable(cols = [], html_options = {})
+
