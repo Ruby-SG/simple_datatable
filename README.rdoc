@@ -1,4 +1,4 @@
-= Simple_datatable
+= Simple Datatable
 
 {<img src="https://codeclimate.com/github/Ruby-SG/simple_datatable/badges/gpa.svg" />}[https://codeclimate.com/github/Ruby-SG/simple_datatable]
 {<img src="https://travis-ci.org/Ruby-SG/simple_datatable.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/Ruby-SG/simple_datatable]
