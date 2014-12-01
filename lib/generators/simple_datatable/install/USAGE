@@ -1,0 +1,5 @@
+Description:
+    Add require assets file to application.css and application.js
+
+Usage:
+    rails generate simple_datatable:install
