@@ -1,4 +1,3 @@
-simple_datatable
-================
+= Simple_datatable
 
-Simple datatable gem for rails
+{<img src="https://codeclimate.com/github/Ruby-SG/simple_datatable/badges/gpa.svg" />}[https://codeclimate.com/github/Ruby-SG/simple_datatable]
