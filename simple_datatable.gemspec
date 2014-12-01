@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = SimpleDatatable::VERSION
   s.authors     = ["An Cao"]
   s.email       = ["ancv.it@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of SimpleDatatable."
-  s.description = "TODO: Description of SimpleDatatable."
+  s.homepage    = "https://github.com/Ruby-SG/simple_datatable/"
+  s.summary     = "Simple manage admin with datatable"
+  s.description = "Add datatable"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
