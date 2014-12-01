@@ -1,3 +1,18 @@
-= SimpleDatatable
+= Simple_datatable
 
-This project rocks and uses MIT-LICENSE.
+{<img src="https://codeclimate.com/github/Ruby-SG/simple_datatable/badges/gpa.svg" />}[https://codeclimate.com/github/Ruby-SG/simple_datatable]
+{<img src="https://travis-ci.org/Ruby-SG/simple_datatable.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/Ruby-SG/simple_datatable]
+
+== Installation
+
+  gem 'simple_datatable'
+
+== Usage
+
+=== Generate
+
+  rails generate simple_datatable:install
+
+=== Render datatable
+
+  = simple_datatable(cols = [], html_options = {})
