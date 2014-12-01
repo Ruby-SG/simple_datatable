@@ -5,6 +5,7 @@
 {<img src="https://travis-ci.org/Ruby-SG/simple_datatable.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/Ruby-SG/simple_datatable]
 {<img src="https://badge.fury.io/rb/simple_datatable.svg" alt="Gem Version" />}[http://badge.fury.io/rb/simple_datatable]
 {<img src="http://inch-ci.org/github/Ruby-SG/simple_datatable.svg?branch=master" alt="Inline docs" />}[http://inch-ci.org/github/Ruby-SG/simple_datatable]
+{<img src="https://circleci.com/gh/Ruby-SG/simple_datatable.svg?style=svg" alt="Circle CI" />}[https://circleci.com/gh/Ruby-SG/simple_datatable]
 
 == Installation
 
