@@ -12,7 +12,7 @@ module SimpleDatatable
     def add_datatable_bootstrap_stylesheets
       return unless @use_bootstrap
 
-      inject_into_file CSS_PATH, after: "*= require_self\n" do
+      inject_into_file CSS_PATH, before: " */" do
         <<-'RUBY'
  *= require simple_datatable/bootstrap
  *= require simple_datatable/dataTables.bootstrap
@@ -21,7 +21,7 @@ module SimpleDatatable
     end
 
     def add_datatable_javascripts
-      inject_into_file JS_PATH, after: "//= require jquery_ujs\n" do
+      append_to_file JS_PATH do
         <<-'RUBY'
 //= require simple_datatable/jquery.dataTables.min
         RUBY
@@ -31,7 +31,7 @@ module SimpleDatatable
     def add_datatable_bootstrap_javascripts
       return unless @use_bootstrap
 
-      inject_into_file JS_PATH, after: "//= require simple_datatable/jquery.dataTables.min\n" do
+      append_to_file JS_PATH do
         <<-'RUBY'
 //= require simple_datatable/dataTables.bootstrap
         RUBY
