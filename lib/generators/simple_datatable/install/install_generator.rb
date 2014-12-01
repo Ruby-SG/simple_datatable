@@ -1,4 +1,6 @@
 module SimpleDatatable
+
+  # Public: install assets for simple_datatable
   class InstallGenerator < Rails::Generators::Base
     source_root File.expand_path('../templates', __FILE__)
     CSS_PATH = "#{Rails.root}/app/assets/stylesheets/application.css"
