@@ -1,15 +1,14 @@
 module SimpleDatatable
   module ApplicationHelper
-    def simple_datatable(id: nil, klass: '', url: '', cols: [])
-      content_tag :table, id: id, class: klass + ' dataTable', 'data-url' => url do
+    def simple_datatable(cols = [], html_options = {})
+      html_options[:class] ||= ''
+      html_options[:class] << 'dataTable'
+      content_tag :table, html_options do
         content_tag :thead do
           content_tag :tr do
-            col_html = ""
-            cols.each do |col|
-              col.capitalize!
-              col_html << content_tag(:th, col)
-            end
-            col_html.html_safe
+            cols.each_with_object('') do |col, html|
+              html << content_tag(:th, col.capitalize)
+            end.html_safe
           end
         end
       end.html_safe
