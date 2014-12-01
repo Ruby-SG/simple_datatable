@@ -55,7 +55,6 @@ jQuery(document).ready(function(){
 });
         RUBY
       end
-
     end
   end
 end
