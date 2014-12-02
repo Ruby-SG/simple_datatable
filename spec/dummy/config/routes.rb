@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
 
-  mount Appointly::Engine => "/appointly"
+  mount SimpleDatatable::Engine => "/simple_datatable"
 end

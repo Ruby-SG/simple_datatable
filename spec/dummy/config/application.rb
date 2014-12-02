@@ -9,7 +9,7 @@ require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
 Bundler.require(*Rails.groups)
-require "appointly"
+require "simple_datatable"
 
 module Dummy
   class Application < Rails::Application
