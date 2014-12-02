@@ -5,6 +5,7 @@ module SimpleDatatable
     source_root File.expand_path('../templates', __FILE__)
     CSS_PATH = "#{Rails.root}/app/assets/stylesheets/application.css"
     JS_PATH = "#{Rails.root}/app/assets/javascripts/application.js"
+    DATATABLE_JS_PATH = "#{Rails.root}/app/assets/javascripts/datatable.js"
     HELPER_PATH = "#{Rails.root}/app/helpers/application_helper.rb"
 
     def has_use_bootstrap
@@ -26,6 +27,7 @@ module SimpleDatatable
       append_to_file JS_PATH do
         <<-'RUBY'.strip_heredoc
           //= require simple_datatable/jquery.dataTables.min
+          //= require datatable
         RUBY
       end
     end
@@ -42,19 +44,18 @@ module SimpleDatatable
 
     def add_helper
       inject_into_file HELPER_PATH, after: "module ApplicationHelper\n" do
-        <<-'RUBY'
-  include SimpleDatatable::ApplicationHelper
+        <<-'RUBY'.strip_heredoc.insert(0, '  ')
+          include SimpleDatatable::ApplicationHelper
         RUBY
       end
     end
 
     def init_datatable
-      append_to_file JS_PATH do
-        <<-'RUBY'
-
-jQuery(document).ready(function(){
-  $('.dataTable').dataTable();
-});
+      create_file DATATABLE_JS_PATH do
+        <<-'RUBY'.strip_heredoc
+          jQuery(document).ready(function(){
+            $('.dataTable').dataTable();
+          });
         RUBY
       end
     end
