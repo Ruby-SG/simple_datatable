@@ -15,17 +15,17 @@ module SimpleDatatable
       return unless @use_bootstrap
 
       inject_into_file CSS_PATH, before: " */" do
-        <<-'RUBY'
- *= require simple_datatable/bootstrap
- *= require simple_datatable/dataTables.bootstrap
+        <<-'RUBY'.strip_heredoc.insert(0, ' ')
+          *= require simple_datatable/bootstrap
+          *= require simple_datatable/dataTables.bootstrap
         RUBY
       end
     end
 
     def add_datatable_javascripts
       append_to_file JS_PATH do
-        <<-'RUBY'
-//= require simple_datatable/jquery.dataTables.min
+        <<-'RUBY'.strip_heredoc
+          //= require simple_datatable/jquery.dataTables.min
         RUBY
       end
     end
@@ -34,8 +34,8 @@ module SimpleDatatable
       return unless @use_bootstrap
 
       append_to_file JS_PATH do
-        <<-'RUBY'
-//= require simple_datatable/dataTables.bootstrap
+        <<-'RUBY'.strip_heredoc
+          //= require simple_datatable/dataTables.bootstrap
         RUBY
       end
     end
